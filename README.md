@@ -6,4 +6,4 @@ meteor
 ```
 #About Java-DDP-Client
 
-(https://github.com/hieuphamjr/java-ddp-client/tree/patch-1))
+https://github.com/hieuphamjr/java-ddp-client/tree/patch-1
