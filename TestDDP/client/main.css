@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.isChecked {
+    text-decoration: line-through;
+}
+
+input[type=checkbox] {
+    transform: scale(3.5);
+    -ms-transform: scale(3.5);
+    -webkit-transform: scale(3.5);
+    padding: 10px;
+}

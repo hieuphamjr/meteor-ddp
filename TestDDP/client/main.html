@@ -1,0 +1,80 @@
+<head>
+    <title>TestDDP</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+
+<body>
+    {{> mainContainer }}
+</body>
+
+<template name="mainContainer">
+    <div class="container">
+        {{> header }}
+        {{#if currentUser}}
+        {{> form}}
+        {{/if}}
+        <ul>
+            {{#each missions}}
+                {{> mission}}
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+<template name="mission">
+    <li class="flex mb-4 items-center my-10 justify-between px-6">
+        {{#if isOwner}}
+            <button class="toggle-private flex-no-shrink mr-4 p-2 border-2 rounded text-teal border-teal bg-teal-500 text-white hover:bg-teal-400">
+                {{#if isPrivate}}
+                    Private
+                {{else}}
+                    Public
+                {{/if}}
+            </button>
+        {{/if}}
+        <span class="{{#if isChecked}}isChecked{{/if}} text-grey-darkest h-100 w-full bg-teal-lightest font-sans">
+            {{title}}
+        </span>
+        {{#if isOwner}}
+        <input type="checkbox" checked="{{isChecked}}" autocomplete="off" class="toggle-checked border-2"/>    
+        {{/if}}
+        <button class="delete flex-no-shrink p-2 ml-10 border-2 rounded text-red border-red hover:text-white hover:bg-red-500 ">
+            Delete
+        </button>
+    </li>
+</template>
+
+<template name="header">
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">Todo list</span>
+        </div>
+        {{> loginButtons}}
+        <div class="filter">
+            <button class="flex-no-shrink p-2 ml-10 border-2 rounded text-white border-red bg-red-600 hover:text-white hover:bg-red-500 " id="hide-completed-button">
+                {{#if hideCompleted}}
+                        Show All
+                {{else}}
+                        Hide Completed
+                {{/if}}
+            </button>
+        </div>
+        
+    </nav>
+</template>
+
+<template name="form">
+    <form class="mission-form h-100 w-full flex items-center justify-center bg-teal-lightest font-sans 
+    bg-white rounded shadow p-6 pb-0">
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" 
+        type="text" name="title" placeholder="Enter new todo" >
+        <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal bg-teal-500 text-white hover:bg-teal-400" 
+        type="submit">
+          Submit
+        </button>
+    </form>
+  </template>

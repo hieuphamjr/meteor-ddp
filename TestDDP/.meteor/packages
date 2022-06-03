@@ -25,5 +25,6 @@ blaze-hot               # Update files using Blaze's API with HMR
 dev-error-overlay
 reactive-dict
 accounts-password
-iron:router
-ddp-client
+accounts-ui
+accounts-github
+github-config-ui

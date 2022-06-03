@@ -1,5 +1,5 @@
 {
-  "name": "todos",
+  "name": "TestDDP",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
-    "bcrypt": "^5.0.1",
-    "isomorphic-ws": "^4.0.1",
+    "autoprefixer": "^10.4.7",
     "jquery": "^3.6.0",
     "meteor-node-stubs": "^1.2.1",
-    "simpleddp": "^2.2.4",
-    "ws": "^8.7.0"
+    "postcss": "^8.4.14",
+    "postcss-load-config": "^4.0.1",
+    "tailwindcss": "^3.0.24"
   },
   "meteor": {
     "mainModule": {
