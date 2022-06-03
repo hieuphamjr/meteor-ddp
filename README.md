@@ -1,9 +1,9 @@
-# To run Meteor todos
+# To run Meteor app
 
 ```
-cd todos
+cd TestDDP
 meteor
 ```
 #About Java-DDP-Client
 
-https://github.com/hieuphamjr/java-ddp-client/tree/patch-1
+https://github.com/kenyee/java-ddp-client
