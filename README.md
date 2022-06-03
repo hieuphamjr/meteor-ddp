@@ -1,6 +1,7 @@
 # To run Meteor app
 
 ```
+npm install -g meteor
 cd TestDDP
 meteor
 ```
